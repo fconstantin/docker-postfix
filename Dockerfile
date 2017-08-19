@@ -10,6 +10,7 @@ ENV SUPERVISOR_VERSION=3.3.3
 RUN apk update && apk add --no-cache python=$PYTHON_VERSION py-pip=$PY_PIP_VERSION \
         postfix=$POSTFIX_VERSION postfix-pcre=$POSTFIX_VERSION rsyslog=$RSYSLOG_VERSION
 
+RUN pip install --upgrade pip
 RUN pip install supervisor==$SUPERVISOR_VERSION
 
 COPY start.sh /start.sh
