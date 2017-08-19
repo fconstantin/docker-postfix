@@ -14,6 +14,7 @@ RUN pip install --upgrade pip
 RUN pip install supervisor==$SUPERVISOR_VERSION
 
 COPY start.sh /start.sh
+COPY supervisord.conf /etc/supervisord.conf
 
 RUN chmod +x /start.sh
 
