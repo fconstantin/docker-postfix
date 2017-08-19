@@ -15,4 +15,4 @@ RUN pip install supervisor==$SUPERVISOR_VERSION
 
 COPY start.sh /start.sh
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+CMD ["/start.sh"]
