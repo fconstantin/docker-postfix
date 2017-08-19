@@ -15,4 +15,6 @@ RUN pip install supervisor==$SUPERVISOR_VERSION
 
 COPY start.sh /start.sh
 
+RUN chmod +x /start.sh
+
 CMD ["/start.sh"]
