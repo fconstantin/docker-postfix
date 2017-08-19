@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # Run postfix
-supervisord
+supervisord -c /etc/supervisord.conf
